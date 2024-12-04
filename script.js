@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  // Smooth scrolling for navigation links
   $('nav a').on('click', function (e) {
     e.preventDefault(); 
     const targetSection = $(this).attr('href');
@@ -10,22 +9,19 @@ $(document).ready(() => {
   });
 
   $(document).ready(function() {
-    // Play sound when the play button is clicked
     $(".sound-btn").click(function() {
-      var audioElement = $(this).siblings(".car-sound")[0]; // Find the corresponding audio element
+      var audioElement = $(this).siblings(".car-sound")[0];
       if (audioElement.paused) {
-        audioElement.play(); // Play the audio if it's paused
-        $(this).text("Pause Sound"); // Change button text to "Pause"
+        audioElement.play(); 
+        $(this).text("Pause Sound"); 
       } else {
-        audioElement.pause(); // Pause the audio if it's playing
-        audioElement.currentTime = 0; // Reset audio to the start
-        $(this).text("Play Sound"); // Change button text back to "Play"
+        audioElement.pause(); 
+        audioElement.currentTime = 0; 
+        $(this).text("Play Sound"); 
       }
     });
   });
   
-
-  // Open modal with car details
   $('.details-btn').on('click', function () {
     const carTitle = $(this).siblings('h3').text();
     const carDescription = $(this).parent().data('description');
@@ -49,19 +45,16 @@ $(document).ready(() => {
     $('#modal').removeClass('hidden');
   });
 
-  // Close modal when clicking the close button
   $('#close-modal').on('click', function () {
     $('#modal').addClass('hidden');
   });
 
-  // Close modal when clicking outside of the modal content
   $('#modal').on('click', function (e) {
     if ($(e.target).is('#modal') || $(e.target).is('#close-modal')) {
       $('#modal').addClass('hidden');
     }
   });
 
-  // Filter functionality
   $('#filter-form').on('submit', function (e) {
     e.preventDefault();
     const manufacturer = $('#manufacturer-filter').val();
