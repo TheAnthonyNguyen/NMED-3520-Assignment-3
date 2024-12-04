@@ -212,7 +212,6 @@ body {
   }
 
   #reference-list {
-    /* text-decoration: none; */
     color: white
   }
     
@@ -228,8 +227,6 @@ body {
   .references, h2 {
     text-align: center;
   }
-
-
 
   .references {
     margin-left: 10px;
