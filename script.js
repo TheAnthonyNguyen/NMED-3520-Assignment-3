@@ -9,19 +9,19 @@ $(document).ready(() => {
   });
 
   $(document).ready(function() {
-    $(".sound-btn").click(function() {
-      var audioElement = $(this).siblings(".car-sound")[0];
-      if (audioElement.paused) {
-        audioElement.play(); 
-        $(this).text("Pause Sound"); 
-      } else {
-        audioElement.pause(); 
-        audioElement.currentTime = 0; 
-        $(this).text("Play Sound"); 
-      }
-    });
+  $(".sound-btn").click(function() {
+    var audioElement = $(this).siblings(".car-sound")[0];
+    if (audioElement.paused) {
+      audioElement.play();
+      $(this).text("Pause Sound");
+    } else {
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      $(this).text("Play Sound");
+    }
   });
-  
+});
+
   $('.details-btn').on('click', function () {
     const carTitle = $(this).siblings('h3').text();
     const carDescription = $(this).parent().data('description');
