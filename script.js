@@ -34,7 +34,7 @@ $(document).ready(() => {
   
     $('#modal-title').text(carTitle);
     $('#modal-description').html(`
-      <p>${carDescription}</p>
+      <p><strong>Description:</strong> ${carDescription}</p>
       <p><strong>Engine:</strong> ${carEngine}</p>
       <p><strong>Power:</strong> ${carPower}</p>
       <p><strong>Electric Motor:</strong> ${carElectricMotor}</p>
