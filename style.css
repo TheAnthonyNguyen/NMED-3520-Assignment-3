@@ -61,10 +61,10 @@ body {
     gap: 1.5em;
   }
 
-  #picture-reference {
-    font-size: 4px;
+  #picture-reference, #sound-reference {
+    font-size: 15px;
     margin-top: 0px;
-    margin-left: 2px;
+    margin-left: 20px;
   }
   
   .car-card {
@@ -89,7 +89,7 @@ body {
   }
   
   .car-card h3 {
-    margin: 1em 0 0.5em;
+    margin: 0.5em 0 0.5em;
     padding-left: 0.7em;
   }
   
@@ -210,6 +210,11 @@ body {
     cursor: pointer;
     color: #ff6f61;
   }
+
+  #reference-list {
+    /* text-decoration: none; */
+    color: white
+  }
     
   footer {
     text-align: center;
@@ -218,5 +223,15 @@ body {
     color: #f4f4f9;
     margin-top: 2em;
     font-size: 0.9em;
+  }
+
+  .references, h2 {
+    text-align: center;
+  }
+
+
+
+  .references {
+    margin-left: 10px;
   }
   
