@@ -60,6 +60,12 @@ body {
     justify-content: center;
     gap: 1.5em;
   }
+
+  #picture-reference {
+    font-size: 4px;
+    margin-top: 0px;
+    margin-left: 2px;
+  }
   
   .car-card {
     position: relative;
@@ -188,7 +194,7 @@ body {
     background: #2a2f38;
     padding: 2em;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     color: #f4f4f9;
     position: relative;
     width: 80%;

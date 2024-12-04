@@ -68,3 +68,16 @@ $(document).ready(() => {
     });
   });
 });
+
+// $('#filter-form, #clear-button').on('submit', function (e) {
+//   e.preventDefault();
+//   const manufacturer = $('#manufacturer-filter').val('all');
+//   const year = $('#year-filter').val('all');
+
+//   $('.car-card').each(function () {
+//     const matchesManufacturer = manufacturer === 'all' || $(this).data('manufacturer') === manufacturer;
+//     const matchesYear = year === 'all' || $(this).data('year') == year;
+
+//     $(this).toggle(matchesManufacturer && matchesYear);
+//   });
+// });
