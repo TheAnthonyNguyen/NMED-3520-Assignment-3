@@ -55,6 +55,12 @@ $(document).ready(() => {
     }
   });
 
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+        $('#modal').addClass('hidden');
+    }
+});
+
   $('#filter-form').on('submit', function (e) {
     e.preventDefault();
     const manufacturer = $('#manufacturer-filter').val();
@@ -68,3 +74,37 @@ $(document).ready(() => {
     });
   });
 });
+
+function updateCarCount() {
+  const visibleCars = $('.car-card:visible').length;
+  $('#count').text(visibleCars);
+}
+
+$('#filter-form').on('submit', function (e) {
+  e.preventDefault();
+  const manufacturer = $('#manufacturer-filter').val();
+  const year = $('#year-filter').val();
+
+  $('.car-card').hide().filter(function () {
+    const matchesManufacturer = manufacturer === 'all' || $(this).data('manufacturer') === manufacturer;
+    const matchesYear = year === 'all' || $(this).data('year') == year;
+    return matchesManufacturer && matchesYear;
+  }).show();
+
+  updateCarCount();
+});
+
+updateCarCount();
+
+$(window).on('scroll', function () {
+  if ($(window).scrollTop() > 300) {
+    $('#back-to-top').fadeIn();
+  } else {
+    $('#back-to-top').fadeOut();
+  }
+});
+
+$('#back-to-top').on('click', function () {
+  $('html, body').animate({ scrollTop: 0 }, 800);
+});
+

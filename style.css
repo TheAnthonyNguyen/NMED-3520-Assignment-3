@@ -16,6 +16,9 @@ body {
     color: #ff6f61;
     padding: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
   
   header nav ul {
@@ -40,7 +43,6 @@ body {
     color: #ff6f61;
   }
   
-
   main {
     padding: 2em 1em;
   }
@@ -110,7 +112,6 @@ body {
     background: #ff4c3b;
   }
 
-  /* Style for Play Sound Button */
 .sound-btn {
   background: #ff6f61;
   border: none;
@@ -214,7 +215,35 @@ body {
   #reference-list {
     color: white
   }
-    
+
+  #car-count {
+    text-align: center;
+    color: #ff6f61;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+
+  #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6f61;
+    border: none;
+    color: white;
+    padding: 1em;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    font-size: 1em;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background: #ff4c3b;
+  }
+  
   footer {
     text-align: center;
     padding: 1em;
